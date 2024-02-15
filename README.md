@@ -3,27 +3,7 @@ Mobile user interface
 
 ### Project structure
 
-└── lipila-dot-tech/
-    ├── App.js
-    ├── app.json
-    ├── assets/
-    │   ├── favicon.png
-    │   └── static/
-    │       ├── css/
-    │       │   ├── style.css
-    │       │   └── main.css
-    │       ├── js/
-    │       │   └── main.js
-    │       └── img/
-    │           └── logo.png
-    ├── babel.config.js
-    ├── node_modules/
-    ├── package.json
-    ├── package-lock.json
-    └── tempates/ _pure html,css, and js responsive UI_
-        ├── admin/
-        ├── lipila/
-        └── history/
+<img src="https://photos.app.goo.gl/T6pheRCFunk7oFXV9"></img>
 
 ### Contribution
 Make contributions as assigned by the project manager.
