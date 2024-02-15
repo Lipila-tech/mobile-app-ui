@@ -3,7 +3,7 @@ Mobile user interface
 
 ### Project structure
 
-<img src="https://photos.app.goo.gl/T6pheRCFunk7oFXV9"></img>
+![Project structure](./assets/lipila-project-structure.png)
 
 ### Contribution
 Make contributions as assigned by the project manager.
