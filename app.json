@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9ab0b73a-1a81-416c-9391-d5f4d06f3fba"
+      }
+    },
+    "owner": "zyambo"
   }
 }
