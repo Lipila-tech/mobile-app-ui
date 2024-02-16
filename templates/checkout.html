@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Checkout</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom CSS */
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div id="step1">
+          <h2>Step 1: Enter Seller ID or Payment Code</h2>
+          <input type="text" class="form-control mb-3" placeholder="Enter Seller ID or Payment Code">
+          <button class="btn btn-primary" onclick="nextStep()">Next</button>
+        </div>
+        <div id="step2" style="display: none;">
+          <h2>Step 2: Confirm Payment Details</h2>
+          <input type="text" class="form-control mb-3" placeholder="Enter Payment Amount">
+          <div class="form-group">
+            <label for="paymentMethod">Select Payment Method:</label>
+            <select class="form-control" id="paymentMethod">
+              <option value="MTN">MTN</option>
+              <option value="Airtel">Airtel</option>
+            </select>
+          </div>
+          <button class="btn btn-primary mr-2" onclick="prevStep()">Back</button>
+          <button class="btn btn-primary" onclick="nextStep()">Next</button>
+        </div>
+        <div id="step3" style="display: none;">
+          <h2>Step 3: Submit for Payment</h2>
+          <!-- Confirmation & Receipt details will be displayed here -->
+          <button class="btn btn-primary mr-2" onclick="prevStep()">Back</button>
+          <button class="btn btn-success" onclick="submitPayment()">Submit Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function nextStep() {
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('step2').style.display = 'block';
+    }
+
+    function prevStep() {
+      document.getElementById('step2').style.display = 'none';
+      document.getElementById('step1').style.display = 'block';
+    }
+
+    function submitPayment() {
+      // Payment submission logic here
+      alert('Payment submitted successfully!');
+    }
+  </script>
+</body>
+</html>
