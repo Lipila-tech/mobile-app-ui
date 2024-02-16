@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "lipila-dot-tech",
-    "slug": "lipila-dot-tech",
+    "name": "lipila",
+    "slug": "lipila",
+    "scheme":"lipila",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +10,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#25292e"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -24,13 +25,17 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     },
     "extra": {
       "eas": {
         "projectId": "9ab0b73a-1a81-416c-9391-d5f4d06f3fba"
       }
     },
-    "owner": "zyambo"
+    "owner": "zyambo",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
