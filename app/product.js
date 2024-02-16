@@ -1,8 +1,10 @@
 import { View, Pressable, Text, StyleSheet } from 'react-native';
 import { Stack } from 'expo-router';
-import CircleButton from '../components/CircleButton';
+import ProductButton from '../components/ProductButton';
 import { useState } from 'react';
 import ProductCreator from '../components/ProductCreator';
+import ProductForm from '../components/ProductForm';
+
 
 export default function Payment() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -24,20 +26,21 @@ export default function Payment() {
           }}
         />
         <ProductCreator isVisible={isModalVisible} onClose={onModalClose}>
-          {/* text input components will go here */}
+          <ProductForm></ProductForm>
         </ProductCreator>
-        <View style={styles.buttonContainer}>
-          <CircleButton onPress={onCreateProduct} />
-        </View>
+        {!isModalVisible && (
+          <View style={styles.buttonContainer}>
+            <ProductButton onPress={onCreateProduct} />
+          </View>
+        )}
       </View>
     </>
-
-  );
+);
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'pink',
+    backgroundColor: 'white',
     flex: 1,
     alignItems:
       'center',

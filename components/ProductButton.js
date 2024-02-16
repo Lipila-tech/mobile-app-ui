@@ -1,7 +1,7 @@
 import { View, Pressable, StyleSheet } from 'react-native';
 import { useHover} from "react-native-web-hooks";
 
-export default function CircleButton({ onPress }) {
+export default function ProductButton({ onPress }) {
     const isHovered = useHover(null);
 
     return (
