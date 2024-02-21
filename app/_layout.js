@@ -7,8 +7,17 @@ export default function Layout() {
         <Tabs.Screen 
           name='home'
           options={{
+            tabBarLabel:'Home',
+            tabBarActiveBackgroundColor:'#580',
+            headerTintColor:'#580',
           }}
         />
       </Tabs>
   );
 }
+
+const styles = StyleSheet.create({
+  header: {
+    backgroundColor:'pink',
+  }
+})
