@@ -17,6 +17,7 @@ export default function Contact() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '',
     flex: 1,
     alignItems:
     'center',

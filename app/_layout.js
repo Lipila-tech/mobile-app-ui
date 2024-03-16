@@ -18,6 +18,6 @@ export default function Layout() {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor:'pink',
+    backgroundColor:'',
   }
 })

@@ -11,7 +11,7 @@ export default function Page() {
         title: 'Home',
       }}
     />
-    <Text>Welcome to Lipila</Text>
+    <Pressable>Login</Pressable>
   </View>
   );
 }
