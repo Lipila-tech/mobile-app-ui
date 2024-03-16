@@ -69,6 +69,7 @@ export default Contact;
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '',
     flex: 1,
   },
   contentContainer: {

@@ -9,6 +9,8 @@ import ProductCreator from '../components/product/ProductCreator';
 import ProductForm from '../components/product/ProductForm';
 import ProductButton from '../components/product/ProductButton';
 import History from '../components/History';
+import {DataTable} from "react-native-paper";
+import PaymentForm from '../components/SendMoney';
 
 const DashboardApp = () => {
     const [activeSection, setActiveSection] = useState('Home');
@@ -180,6 +182,20 @@ const DashboardApp = () => {
         </Pressable>
     );
 
+    const PaymentSection = () => (
+        <View style={styles.container}>
+            <View style={styles.headerContainer}>
+                {renderBackButton()}
+                <Text style={styles.headerTitle}>
+                    Payment Section
+                </Text>
+            </View>
+            <View style={styles.contentContainer}>
+                <PaymentForm/>
+            </View>
+        </View>
+    );
+
     const HistorySection = () => (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
@@ -190,6 +206,37 @@ const DashboardApp = () => {
             </View>
             <View style={styles.contentContainer}>
                 <History />
+                <Text style={styles.contentTitle}>
+                    Transaction History
+                </Text>
+                <DataTable style={styles.container}>
+                    <DataTable.Header style={styles.tableHeader}>
+                        <DataTable.Title>Name</DataTable.Title>
+                        <DataTable.Title>Favourite Food</DataTable.Title>
+                        <DataTable.Title>Age</DataTable.Title>
+                    </DataTable.Header>
+                    <DataTable.Row>
+                        <DataTable.Cell>Radhika</DataTable.Cell>
+                        <DataTable.Cell>Dosa</DataTable.Cell>
+                        <DataTable.Cell>23</DataTable.Cell>
+                    </DataTable.Row>
+
+                    <DataTable.Row>
+                        <DataTable.Cell>Krishna</DataTable.Cell>
+                        <DataTable.Cell>Uttapam</DataTable.Cell>
+                        <DataTable.Cell>26</DataTable.Cell>
+                    </DataTable.Row>
+                    <DataTable.Row>
+                        <DataTable.Cell>Vanshika</DataTable.Cell>
+                        <DataTable.Cell>Brownie</DataTable.Cell>
+                        <DataTable.Cell>20</DataTable.Cell>
+                    </DataTable.Row>
+                    <DataTable.Row>
+                        <DataTable.Cell>Teena</DataTable.Cell>
+                        <DataTable.Cell>Pizza</DataTable.Cell>
+                        <DataTable.Cell>24</DataTable.Cell>
+                    </DataTable.Row>
+                </DataTable>
             </View>
         </View>
     );
@@ -318,7 +365,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         marginTop: 5,
     },
-
 });
 export default DashboardApp;
 
