@@ -9,7 +9,8 @@ import ProductCreator from '../components/product/ProductCreator';
 import ProductForm from '../components/product/ProductForm';
 import ProductButton from '../components/product/ProductButton';
 import {DataTable} from "react-native-paper";
-import PaymentForm from '../components/SendMoney';
+import PaymentForm from '../components/payment/SendMoney';
+import History from '../components/History';
 
 const DashboardApp = () => {
     const [activeSection, setActiveSection] = useState('Home');
@@ -183,37 +184,6 @@ const DashboardApp = () => {
         </Pressable>
     );
 
-    const PaymentSection = () => (
-        <View style={styles.container}>
-            <View style={styles.headerContainer}>
-                {renderBackButton()}
-                <Text style={styles.headerTitle}>
-                    Payment Section
-                </Text>
-            </View>
-            <View style={styles.contentContainer}>
-                <PaymentForm/>
-            </View>
-        </View>
-    );
-
-    const MessagesSection = () => (
-        <View style={styles.container}>
-            <View style={styles.headerContainer}>
-                {renderBackButton()}
-                <Text style={styles.headerTitle}>
-                    Messages Section
-                </Text>
-            </View>
-            <View style={styles.contentContainer}>
-                <Text style={styles.contentText}>
-                    Messages Content Goes Here
-                </Text>
-
-            </View>
-        </View>
-    );
-
     const HistorySection = () => (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
@@ -223,37 +193,7 @@ const DashboardApp = () => {
                 </Text>
             </View>
             <View style={styles.contentContainer}>
-                <Text style={styles.contentTitle}>
-                    Transaction History
-                </Text>
-                <DataTable style={styles.container}>
-                    <DataTable.Header style={styles.tableHeader}>
-                        <DataTable.Title>Name</DataTable.Title>
-                        <DataTable.Title>Favourite Food</DataTable.Title>
-                        <DataTable.Title>Age</DataTable.Title>
-                    </DataTable.Header>
-                    <DataTable.Row>
-                        <DataTable.Cell>Radhika</DataTable.Cell>
-                        <DataTable.Cell>Dosa</DataTable.Cell>
-                        <DataTable.Cell>23</DataTable.Cell>
-                    </DataTable.Row>
-
-                    <DataTable.Row>
-                        <DataTable.Cell>Krishna</DataTable.Cell>
-                        <DataTable.Cell>Uttapam</DataTable.Cell>
-                        <DataTable.Cell>26</DataTable.Cell>
-                    </DataTable.Row>
-                    <DataTable.Row>
-                        <DataTable.Cell>Vanshika</DataTable.Cell>
-                        <DataTable.Cell>Brownie</DataTable.Cell>
-                        <DataTable.Cell>20</DataTable.Cell>
-                    </DataTable.Row>
-                    <DataTable.Row>
-                        <DataTable.Cell>Teena</DataTable.Cell>
-                        <DataTable.Cell>Pizza</DataTable.Cell>
-                        <DataTable.Cell>24</DataTable.Cell>
-                    </DataTable.Row>
-                </DataTable>
+                <History/>
             </View>
         </View>
     );
@@ -382,36 +322,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         marginTop: 5,
     },
-    eventItem: {
-        backgroundColor: 'white',
-        borderRadius: 10,
-        padding: 15,
-        marginVertical: 10,
-        elevation: 5,
-    },
-    eventDateTime: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginBottom: 10,
-    },
-    eventDate: {
-        color: '#3498db',
-        fontSize: 16,
-        fontWeight: 'bold',
-    },
-    eventTime: {
-        color: '#555',
-        fontSize: 16,
-    },
-    eventTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#333',
-    },
-    eventLocation: {
-        fontSize: 14,
-        color: '#777',
-    },
+   
 });
 export default DashboardApp;
 
