@@ -6,7 +6,6 @@ import ProductCreator from '../components/product/ProductCreator';
 import ProductForm from '../components/product/ProductForm';
 import ProductButton from '../components/product/ProductButton';
 import History from '../components/History';
-import { DataTable } from "react-native-paper";
 import PaymentForm from '../components/payment/SendMoney';
 import Contact from '../components/Contact';
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
