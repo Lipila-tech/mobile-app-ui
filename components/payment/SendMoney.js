@@ -37,22 +37,22 @@ const PaymentForm = ({ onSubmit }) => {
       <View style={[styles.contentContainer, styles.productsContainer]}>
         <form onSubmit={handleSubmit}>
           {currentStep === 0 && (
-            <div>
+            <View>
               <FindPayee formData={formData} handleChange={handleChange} onNext={onNext} />
-            </div>
+            </View>
           )}
           {currentStep === 1 && (
-            <div>
+            <View>
               <PaymentDetails formData={formData} handleChange={handleChange} onNext={onNext} />
-              <button className='btn btn-primary' type="button" onClick={handleBack}>Back</button><br />
-            </div>
+              <button style='btn btn-primary' type="button" onClick={handleBack}>Back</button><br />
+            </View>
           )}
           {currentStep === 2 && (
-            <div className=''>
+            <View style=''>
               <Confirmation paymentData={formData} />
-              <button className='btn btn-primary' type="button" onClick={handleBack}>Back</button><br />
-              <button className='btn btn-primary' type="submit">Submit Payment</button>
-            </div>
+              <button style='btn btn-primary' type="button" onClick={handleBack}>Back</button><br />
+              <button style='btn btn-primary' type="submit">Submit Payment</button>
+            </View>
           )}
         </form>
       </View>

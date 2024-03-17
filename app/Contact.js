@@ -1,8 +1,12 @@
-import { StyleSheet, View, Text } from 'react-native';
+import { React, useState } from 'react';
+import { StyleSheet, View, Text, SafeAreaView, TextInput} from 'react-native';
 import { Stack } from 'expo-router';
 
 
-export default function Contact() {
+const Contact = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  
   return (
     <View style={styles.container}>
       <Stack.Screen
@@ -13,13 +17,55 @@ export default function Contact() {
       <View style={styles.headerContainer}>
         <Text style={styles.headerTitle}>Good day Pita!</Text>
       </View>
-      <View style={styles.contentContainer}>
-        <Text>Contact Page</Text>
-      </View>
+      <SafeAreaView>
+        <Text style={styles.h1}>Email</Text>
+        <View>
+          <label htmlFor="email">Email</label>
+          <TextInput
+            style={styles.input}
+            type="text"
+            id="email"
+            name="email"
+            value={email}
+            onChangeText={setEmail}
+            required
+            placeholder='Ex: pz@lipila.io'
+          />
+        </View>
+
+        <View style={styles.formGroup}>
+          <label htmlFor="subject">Subject</label>
+          <select style={styles.formControl}>
+            <option value="p1">Lipila Pricing</option>
+            <option value="p1">Job offer</option>
+            <option value="p1">Other</option>
+          </select>
+        </View>
+
+        <View>
+          <label htmlFor="message">Message</label>
+          <TextInput
+            style={styles.input}
+            type="text"
+            id="message"
+            name="message"
+            value={message}
+            onChangeText={setMessage}
+            required
+            placeholder='Ex: How much is the pricing for one....'
+          />
+        </View>
+
+        <View style={styles.col12}>
+          <button type="submit" style={styles.btnPrimary}>Submit</button>
+        </View>
+      </SafeAreaView>
 
     </View>
   );
 }
+
+export default Contact;
 
 const styles = StyleSheet.create({
   container: {
@@ -42,5 +88,26 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     marginBottom: 20,
+  },
+  contentText: {
+    fontSize: 16,
+    marginBottom: 10,
+    color: '#555',
+  },
+  contentTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 10,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+  h1: {
+    fontSize: 30,
+    color: 'blue',
   },
 })

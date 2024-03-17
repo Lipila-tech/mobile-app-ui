@@ -1,16 +1,16 @@
 const Confirmation = ({ paymentData }) => {
     return (
-        <div className="">
-            <p className="h8 py-3">Confirm payment</p>
-            <div className="confirm-info">
+        <View style="">
+            <p style="h8 py-3">Confirm payment</p>
+            <View style="confirm-info">
                 <p><strong>Send</strong>: {paymentData.amount} ZMW</p>
                 <p><strong>To</strong>: {paymentData.receiverAccountNumber}</p>
                 <p><strong>From</strong>: {paymentData.senderAccountNumber}</p>
                 <p><strong>From</strong>: {paymentData.paymentGateWay}</p>
-            </div>
+            </View>
             <br />
-            <p className="warning">Click Submit to confirm on your phone</p>
-        </div>
+            <p style="warning">Click Submit to confirm on your phone</p>
+        </View>
     )
 }
 

@@ -18,9 +18,9 @@ const FindPayee = ({ onNext }) => {
                 required
                 placeholder='Ex: Zyambo'
             />
-            <div className='col-12'>
-                <button type="submit" className="btn btn-primary mb-2" onClick={onNext}>Next</button>
-            </div>
+            <View style={styles.col12}>
+                <button type="submit" style={styles.btnPrimary} onClick={onNext}>Next</button>
+            </View>
         </SafeAreaView>
 
     );

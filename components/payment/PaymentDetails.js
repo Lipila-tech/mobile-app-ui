@@ -20,15 +20,15 @@ const PaymentDetails = ({ onNext }) => {
                 required
                 placeholder='Ex: 100'
             />
-            <div className="form-group">
+            <View style={styles.formGroup}>
                 <label htmlFor="product">Select Product:</label>
-                <select className="form-control" id="product">
+                <select style={styles.formControl}>
                     <option value="p1">Product 1</option>
                     <option value="p1">Product 2</option>
                     <option value="p1">Product 3</option>
                     <option value="p1">Product 4</option>
                 </select>
-            </div>
+            </View>
 
             <TextInput
                 style={styles.input}
@@ -51,16 +51,16 @@ const PaymentDetails = ({ onNext }) => {
                 placeholder='Ex: Payment for the laptop...'
             />
 
-            <div className="form-group">
+            <View style={styles.formGroup}>
                 <label htmlFor="paymentMethod">Select Payment Method:</label>
-                <select className="form-control" id="paymentMethod">
+                <select style={styles.formControl}>
                     <option value="MTN">MTN</option>
                     <option value="Airtel">Airtel</option>
                 </select>
-            </div>
-            <div className='col-12'>
-                <button type="submit" className="btn btn-primary mb-2" onClick={onNext}>Next</button>
-            </div>
+            </View>
+            <View style={styles.col12}>
+                <button type="submit" style={styles.btnPrimary} onClick={onNext}>Next</button>
+            </View>
         </SafeAreaView>
 
     );
