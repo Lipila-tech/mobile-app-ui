@@ -8,8 +8,6 @@ import Icon
 import ProductCreator from '../components/product/ProductCreator';
 import ProductForm from '../components/product/ProductForm';
 import ProductButton from '../components/product/ProductButton';
-import {DataTable} from "react-native-paper";
-import PaymentForm from '../components/payment/SendMoney';
 import History from '../components/History';
 
 const DashboardApp = () => {
@@ -47,9 +45,7 @@ const DashboardApp = () => {
     const HomeSection = () => (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
-                <Text style={styles.headerTitle}>
-                    Welcome User!
-                </Text>
+                <Text style={styles.headerTitle}>Good day Pita!</Text>
                 <View style={styles.buttonsContainer}>
                     <Pressable onPress=
                         {
@@ -193,7 +189,7 @@ const DashboardApp = () => {
                 </Text>
             </View>
             <View style={styles.contentContainer}>
-                <History/>
+                <History />
             </View>
         </View>
     );
@@ -322,7 +318,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         marginTop: 5,
     },
-   
+
 });
 export default DashboardApp;
 

@@ -8,16 +8,13 @@ export default function Layout() {
           name='home'
           options={{
             tabBarLabel:'Home',
-            tabBarActiveBackgroundColor:'#580',
+            tabBarActiveBackgroundColor:'#3498db',
+            tabBarInactiveBackgroundColor:'gray',
             headerTintColor:'#580',
+            tabBarActiveTintColor:'#fff',
+            tabBarInactiveTintColor:'#aaa',
           }}
         />
       </Tabs>
   );
 }
-
-const styles = StyleSheet.create({
-  header: {
-    backgroundColor:'',
-  }
-})
