@@ -16,13 +16,13 @@ const WelcomeScreen = () => {
           <Text style={styles.headerTitle}>Good day Pita!</Text>
         </View>
 
-        <View style={styles.featureBox}>
+        <View style={styles.buttonBox}>
           <Pressable style={styles.button}>Login</Pressable>
         </View>
-        <View style={styles.featureBox}>
+        <View style={styles.buttonBox}>
           <Pressable style={styles.button}>Terms of Use</Pressable>
         </View>
-        <View style={styles.featureBox}>
+        <View style={styles.buttonBox}>
           <Pressable style={styles.button}>About</Pressable>
         </View>
       </View>
@@ -41,14 +41,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#3498db',
     borderWidth: 2,
     borderColor: "blue",
-    width: '20%',
-    height: '50%',
+    width: '50%',
+    height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    fontSize: 32,
+    fontSize: 25,
     fontWeight: 'bold',
     color: 'white',
+  },
+  buttonBox: {
+    flex: 1,
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   headerContainer: {
@@ -86,12 +92,5 @@ const styles = StyleSheet.create({
     color: '#333',
     marginBottom: 10,
   },
-  featureBox: {
-    flex: 1,
-    padding: 15,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    aspectRatio: 13,
-  },
+
 })

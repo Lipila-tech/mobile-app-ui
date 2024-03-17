@@ -1,26 +1,28 @@
 import { React, useState } from 'react';
-import { StyleSheet, View, Text, SafeAreaView, TextInput} from 'react-native';
-import { Stack } from 'expo-router';
+import { StyleSheet, View, Text, SafeAreaView, TextInput } from 'react-native';
 
 
 const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  
+
   return (
     <View style={styles.container}>
-      <Stack.Screen
-        options={{
-          title: 'Contact',
-        }}
-      />
-      <View style={styles.headerContainer}>
-        <Text style={styles.headerTitle}>Good day Pita!</Text>
-      </View>
       <SafeAreaView>
-        <Text style={styles.h1}>Email</Text>
+        <Text style={styles.h1}>Send us a message</Text>
+
+        <View style={styles.formGroup}>
+          <label htmlFor="subject">Select Subject:</label>
+          <select style={styles.formControl}>
+            <option value="p1">Subject 1</option>
+            <option value="p1">Subject 2</option>
+            <option value="p1">Subject 3</option>
+            <option value="p1">Subject 4</option>
+          </select>
+        </View>
+
         <View>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email:</label>
           <TextInput
             style={styles.input}
             type="text"
@@ -29,21 +31,12 @@ const Contact = () => {
             value={email}
             onChangeText={setEmail}
             required
-            placeholder='Ex: pz@lipila.io'
+            placeholder='Ex: lipila@email.io'
           />
         </View>
 
-        <View style={styles.formGroup}>
-          <label htmlFor="subject">Subject</label>
-          <select style={styles.formControl}>
-            <option value="p1">Lipila Pricing</option>
-            <option value="p1">Job offer</option>
-            <option value="p1">Other</option>
-          </select>
-        </View>
-
         <View>
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">Message:</label>
           <TextInput
             style={styles.input}
             type="text"
@@ -51,13 +44,12 @@ const Contact = () => {
             name="message"
             value={message}
             onChangeText={setMessage}
-            required
-            placeholder='Ex: How much is the pricing for one....'
+            placeholder='Ex: Payment for the laptop...'
           />
         </View>
 
         <View style={styles.col12}>
-          <button type="submit" style={styles.btnPrimary}>Submit</button>
+          <button type="submit" style={styles.btnPrimary}>submit</button>
         </View>
       </SafeAreaView>
 
@@ -70,6 +62,9 @@ export default Contact;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems:
+      'center',
+    justifyContent: 'center'
   },
   contentContainer: {
     flex: 1,

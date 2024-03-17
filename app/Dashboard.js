@@ -9,8 +9,9 @@ import ProductCreator from '../components/product/ProductCreator';
 import ProductForm from '../components/product/ProductForm';
 import ProductButton from '../components/product/ProductButton';
 import History from '../components/History';
-import {DataTable} from "react-native-paper";
+import { DataTable } from "react-native-paper";
 import PaymentForm from '../components/payment/SendMoney';
+import Contact from '../components/Contact';
 
 const DashboardApp = () => {
     const [activeSection, setActiveSection] = useState('Home');
@@ -25,6 +26,8 @@ const DashboardApp = () => {
                 return <PaymentSection />;
             case 'History':
                 return <HistorySection />;
+            case 'Contact':
+                return <ContactSection />;
             default:
                 return <HomeSection />;
         }
@@ -84,6 +87,11 @@ const DashboardApp = () => {
                     icon="stats-chart" onPress=
                     {
                         () => setActiveSection('History')
+                    } />
+                <PressableFeatureBox name="Contact"
+                    icon="person" onPress=
+                    {
+                        () => setActiveSection('Contact')
                     } />
             </View>
         </View>
@@ -181,17 +189,30 @@ const DashboardApp = () => {
             </Text>
         </Pressable>
     );
-
+    // My sections
+    const ContactSection = () => (
+        <View style={styles.container}>
+            <View style={styles.headerContainer}>
+                {renderBackButton()}
+                <Text style={styles.headerTitle}>
+                    Contact Us.
+                </Text>
+            </View>
+            <View style={styles.contentContainer}>
+                <Contact />
+            </View>
+        </View>
+    );
     const PaymentSection = () => (
         <View style={styles.container}>
             <View style={styles.headerContainer}>
                 {renderBackButton()}
                 <Text style={styles.headerTitle}>
-                    Payment Section
+                    Send Money
                 </Text>
             </View>
             <View style={styles.contentContainer}>
-                <PaymentForm/>
+                <PaymentForm />
             </View>
         </View>
     );
