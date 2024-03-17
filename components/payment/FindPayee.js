@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { TextInput, SafeAreaView, StyleSheet, Text } from "react-native";
+import { TextInput, SafeAreaView, StyleSheet, Text, View} from "react-native";
 
 
 const FindPayee = ({ onNext }) => {

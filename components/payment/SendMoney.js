@@ -44,14 +44,14 @@ const PaymentForm = ({ onSubmit }) => {
           {currentStep === 1 && (
             <View>
               <PaymentDetails formData={formData} handleChange={handleChange} onNext={onNext} />
-              <button style='btn btn-primary' type="button" onClick={handleBack}>Back</button><br />
+              <button style={styles.btnPrimary} type="button" onClick={handleBack}>Back</button><br />
             </View>
           )}
           {currentStep === 2 && (
-            <View style=''>
+            <View>
               <Confirmation paymentData={formData} />
-              <button style='btn btn-primary' type="button" onClick={handleBack}>Back</button><br />
-              <button style='btn btn-primary' type="submit">Submit Payment</button>
+              <button style={styles.btnPrimary} type="button" onClick={handleBack}>Back</button><br />
+              <button style={styles.btnPrimary} type="submit">Submit Payment</button>
             </View>
           )}
         </form>

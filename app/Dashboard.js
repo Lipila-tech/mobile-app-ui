@@ -10,7 +10,7 @@ import ProductForm from '../components/product/ProductForm';
 import ProductButton from '../components/product/ProductButton';
 import History from '../components/History';
 import {DataTable} from "react-native-paper";
-import PaymentForm from '../components/SendMoney';
+import PaymentForm from '../components/payment/SendMoney';
 
 const DashboardApp = () => {
     const [activeSection, setActiveSection] = useState('Home');
