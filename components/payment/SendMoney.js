@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import PaymentDetails from './PaymentDetails';
 import Confirmation from './Confirmation';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import FindPayee from './FindPayee';
+import buttonStyles from '../styles/ButtonStyles';
+import mainStyles from '../styles/MainStyles';
 
 const PaymentForm = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -33,8 +35,8 @@ const PaymentForm = ({ onSubmit }) => {
 
 
   return (
-    <View style={styles.container}>
-      <View style={[styles.contentContainer, styles.productsContainer]}>
+    <View style={mainStyles.container}>
+      <View style={[mainStyles.contentContainer, mainStyles.productsContainer]}>
         <form onSubmit={handleSubmit}>
           {currentStep === 0 && (
             <View>
@@ -44,14 +46,14 @@ const PaymentForm = ({ onSubmit }) => {
           {currentStep === 1 && (
             <View>
               <PaymentDetails formData={formData} handleChange={handleChange} onNext={onNext} />
-              <button style={styles.btnPrimary} type="button" onClick={handleBack}>Back</button><br />
+              <button style={buttonStyles.btnPrimary} type="button" onClick={handleBack}>Back</button><br />
             </View>
           )}
           {currentStep === 2 && (
             <View>
               <Confirmation paymentData={formData} />
-              <button style={styles.btnPrimary} type="button" onClick={handleBack}>Back</button><br />
-              <button style={styles.btnPrimary} type="submit">Submit Payment</button>
+              <button style={buttonStyles.btnPrimary} type="button" onClick={handleBack}>Back</button><br />
+              <button style={buttonStyles.btnPrimary} type="submit">Submit Payment</button>
             </View>
           )}
         </form>
@@ -62,24 +64,3 @@ const PaymentForm = ({ onSubmit }) => {
   );
 };
 export default PaymentForm;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems:
-      'center',
-    justifyContent: 'center'
-  },
-  productsContainer: {
-    backgroundColor: '',
-    flex: 1,
-    alignItems:
-      'center',
-    justifyContent: 'center'
-  },
-  contentContainer: {
-    flex: 1,
-    padding: 20,
-  },
-});
-

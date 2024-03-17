@@ -1,14 +1,15 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 import { DataTable } from "react-native-paper";
+import mainStyles from "./styles/MainStyles";
 
 const History = () => (
 
-    <View style={styles.contentContainer}>
-        <Text style={styles.contentTitle}>
+    <View style={mainStyles.contentContainer}>
+        <Text style={mainStyles.contentTitle}>
             Your Transactions
         </Text>
-        <DataTable style={styles.container}>
-            <DataTable.Header style={styles.tableHeader}>
+        <DataTable style={mainStyles.container}>
+            <DataTable.Header style={mainStyles.tableHeader}>
                 <DataTable.Title>Sent</DataTable.Title>
                 <DataTable.Title>To</DataTable.Title>
                 <DataTable.Title>Date</DataTable.Title>
@@ -49,21 +50,3 @@ const History = () => (
 );
 
 export default History;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    productsContainer: {
-        backgroundColor: '',
-        flex: 1,
-        alignItems:
-            'center',
-        justifyContent: 'center'
-    },
-    contentContainer: {
-        flex: 1,
-        padding: 20,
-    },
-});
-

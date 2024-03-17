@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
-import { TextInput, SafeAreaView, StyleSheet, Text, View } from "react-native";
-
+import { TextInput, SafeAreaView, Text, View } from "react-native";
+import buttonStyles from '../styles/ButtonStyles';
 
 const PaymentDetails = ({ onNext }) => {
     const [amount, setAmount] = useState('');
@@ -59,24 +59,10 @@ const PaymentDetails = ({ onNext }) => {
                 </select>
             </View>
             <View style={styles.col12}>
-                <button type="submit" style={styles.btnPrimary} onClick={onNext}>Next</button>
+                <button type="submit" style={buttonStyles.btnPrimary} onClick={onNext}>Next</button>
             </View>
         </SafeAreaView>
 
     );
 };
-
-const styles = StyleSheet.create({
-    input: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-    },
-    h1: {
-        fontSize: 30,
-        color: 'blue',
-    },
-});
-
 export default PaymentDetails;

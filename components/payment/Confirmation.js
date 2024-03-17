@@ -1,4 +1,4 @@
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 
 const Confirmation = ({ paymentData }) => {
     return (
@@ -17,8 +17,3 @@ const Confirmation = ({ paymentData }) => {
 }
 
 export default Confirmation;
-
-
-const styles = StyleSheet.create({
-    
-})
