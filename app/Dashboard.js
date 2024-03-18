@@ -77,11 +77,11 @@ const DashboardApp = () => {
                 </View>
             </View>
             <View style={mainStyles.featuresContainer}>
-                <PressableFeatureBox name="Send Money"
+                {/* <PressableFeatureBox name="Send Money"
                     icon="money" onPress=
                     {
                         () => setActiveSection('Payment')
-                    } />
+                    } /> */}
                 <PressableFeatureBox name="History"
                     icon="history" onPress=
                     {
@@ -102,7 +102,7 @@ const DashboardApp = () => {
     ) => (
         <Pressable onPress={onPress}
             style={mainStyles.featureBox}>
-            <FontAwesome name={icon} size={50}
+            <FontAwesome name={icon} size={30}
                 color="#fff" />
             <Text style={mainStyles.featureName}>
                 {name}

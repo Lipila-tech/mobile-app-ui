@@ -36,6 +36,10 @@ const WelcomeScreen = () => {
   const onInvoiceModalClose = () => {
     setIsInvoiceModalVisible(false);
   }
+
+  const findCreators = ()=>{
+    alert('Search for my favorite creators');
+  }
   return (
     <View style={mainStyles.contentContainer}>
       <Stack.Screen
@@ -62,6 +66,9 @@ const WelcomeScreen = () => {
           <View style={buttonStyles.buttonBox}>
             <FindInvoice modalVisible={isModalInvoiceVisible} onClose={onInvoiceModalClose}/>
             <Pressable style={buttonStyles.button} onPress={handlePayInvoice}>Pay An Invoice</Pressable>
+          </View>
+          <View style={buttonStyles.buttonBox}>
+            <Pressable style={buttonStyles.button} onPress={findCreators}>Find Creators</Pressable>
           </View>
         </View>
       </View>

@@ -63,10 +63,11 @@ const mainStyles = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 10,
     },
+    // Dashboard Features
     featuresContainer: {
         margin: "auto",
         width: "50%",
-        height: "50%",
+        height: "25%",
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
@@ -79,7 +80,6 @@ const mainStyles = StyleSheet.create({
         borderColor: '#3498db',
         borderWidth: 2,
         margin: 3,
-        padding: 0,
         backgroundColor: '#3478db',
     },
     featureName: {
