@@ -25,6 +25,17 @@ const WelcomeScreen = () => {
     setIsInvoiceModalVisible(true);
   }
 
+  const onPayeeModalClose = () => {
+    setIsPayeeModalVisible(false);
+  }
+
+  const onCreatorModalClose = () => {
+    setIsCreatorModalVisible(false);
+  }
+
+  const onInvoiceModalClose = () => {
+    setIsInvoiceModalVisible(false);
+  }
   return (
     <View style={mainStyles.contentContainer}>
       <Stack.Screen
@@ -41,15 +52,15 @@ const WelcomeScreen = () => {
         </Text>
         <View style={styles.centeredVie}>
           <View style={buttonStyles.buttonBox}>
-            <FindPayee modalVisible={isModalPayeeVisible} />
+            <FindPayee modalVisible={isModalPayeeVisible}  onClose={onPayeeModalClose}/>
             <Pressable style={buttonStyles.button} onPress={handleSendMoney}>Send Money</Pressable>
           </View>
           <View style={buttonStyles.buttonBox}>
-          <FindCreator modalVisible={isModalCreatorVisible} />
+            <FindCreator modalVisible={isModalCreatorVisible} onClose={onCreatorModalClose} />
             <Pressable style={buttonStyles.button} onPress={handleSupportCreator}>Support a Creator</Pressable>
           </View>
           <View style={buttonStyles.buttonBox}>
-          <FindInvoice modalVisible={isModalInvoiceVisible} />
+            <FindInvoice modalVisible={isModalInvoiceVisible} onClose={onInvoiceModalClose}/>
             <Pressable style={buttonStyles.button} onPress={handlePayInvoice}>Pay An Invoice</Pressable>
           </View>
         </View>
