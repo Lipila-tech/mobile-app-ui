@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PaymentDetails from './PaymentDetails';
 import Confirmation from './Confirmation';
 import { View } from 'react-native';
-import FindPayee from './FindPayee';
+import FindPayee from '../Modals/FindPayee';
 import buttonStyles from '../styles/ButtonStyles';
 import mainStyles from '../styles/MainStyles';
 

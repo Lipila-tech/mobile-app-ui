@@ -2,6 +2,8 @@ import { React, useState } from 'react';
 import { View, Text, SafeAreaView, TextInput, Button } from 'react-native';
 import buttonStyles from './styles/ButtonStyles';
 import mainStyles from './styles/MainStyles';
+import formStyles from './styles/formStyles';
+
 
 const Contact = () => {
   const [email, setEmail] = useState('');
@@ -14,7 +16,7 @@ const Contact = () => {
 
         <View style={mainStyles.formGroup}>
           <label htmlFor="subject">Select Subject:</label>
-          <select style={mainStyles.formControl}>
+          <select style={formStyles.input}>
             <option value="p1">Subject 1</option>
             <option value="p1">Subject 2</option>
             <option value="p1">Subject 3</option>
@@ -25,7 +27,7 @@ const Contact = () => {
         <View style={mainStyles.formGroup}>
           <label htmlFor="email">Email:</label>
           <TextInput
-            style={mainStyles.input}
+            style={formStyles.input}
             type="text"
             id="email"
             name="email"
@@ -39,7 +41,7 @@ const Contact = () => {
         <View style={mainStyles.formGroup}>
           <label htmlFor="message">Message:</label>
           <TextInput
-            style={mainStyles.input}
+            style={formStyles.input}
             type="text"
             id="message"
             name="message"
